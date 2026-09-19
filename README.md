@@ -216,16 +216,6 @@ AD8232 ──▶ ADC ──DMA──▶ [Relay Buffer Ring]
 
 ---
 
-## 👥 Team Split
-
-| | **Person A — Hardware, Signal & Power** | **Person B — ML & Intelligence** |
-|---|---|---|
-| **Ownership** | Acquisition, wake-up logic, power state machine | Model design, training, quantization, deployment |
-| **Tasks** | Analog front-end (AD8232) → STM32 ADC integration • Analog watchdog config for HW-triggered wake • DMA circular relay buffer setup (double-half-buffer mode) • Power FSM (WFI-idle ↔ Low-Power RUN ↔ Full RUN ↔ STOP) • Dynamic clock/voltage scaling controller • BLE alert transmission | MIT-BIH / PTB-XL preprocessing • Tier-1 lightweight model training • Tier-2 CNN-LSTM training • Quantization via STM32Cube.AI (X-CUBE-AI) • Confidence-gating logic • Relay buffer read interface for ML inference |
-| **Deliverable** | Power-optimized firmware + DMA relay pipeline + wake FSM | Two deployed, benchmarked models + escalation logic |
-
----
-
 ## 🛠️ Tech Stack
 
 - **MCU:** STM32 (Cortex-M series, e.g. STM32L4/F4 for low-power modes)
