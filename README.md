@@ -1,5 +1,3 @@
-# event-driven-ecg-intelligence
-STM32-based event-driven ECG intelligence system for low-power biomedical monitoring.
 # 🫀 Event-Driven Hierarchical ECG Intelligence for Wearables (STM32)
 
 A power-aware, tiered ECG intelligence pipeline that runs continuous cardiac monitoring on resource-constrained wearable hardware — without draining the battery in a day.
